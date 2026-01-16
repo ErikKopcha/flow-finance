@@ -1,0 +1,23 @@
+:global(body) {
+  margin: 0;
+  font-family:
+    'Inter',
+    'Segoe UI',
+    system-ui,
+    -apple-system,
+    sans-serif;
+  color: #101828;
+  background-color: #f9fafb;
+}
+
+:global(*) {
+  box-sizing: border-box;
+}
+
+:global(a) {
+  color: inherit;
+}
+
+:global(p) {
+  margin: 0;
+}

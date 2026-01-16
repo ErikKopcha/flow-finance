@@ -1,6 +1,5 @@
-.next
 node_modules
-out
 build
-coverage
-*.log
+dist
+public
+routeTree.gen.ts
