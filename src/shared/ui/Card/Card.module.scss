@@ -1,0 +1,38 @@
+$panel: #0f0f0f;
+$border: #262626;
+$white: #ffffff;
+$muted: #a3a3a3;
+
+.card {
+  padding: 20px;
+  border-radius: 16px;
+  background: $panel;
+  border: 1px solid $border;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+  color: $white;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.06);
+  color: $muted;
+}
+
+.meta {
+  font-size: 12px;
+  color: $muted;
+}
+
+.body {
+  margin-top: 12px;
+}

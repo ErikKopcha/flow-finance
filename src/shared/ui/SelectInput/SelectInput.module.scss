@@ -1,0 +1,26 @@
+$panel: #0f0f0f;
+$border: #262626;
+$muted-strong: #737373;
+$white: #ffffff;
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 11px;
+  color: $muted-strong;
+}
+
+.select {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid $border;
+  background: $panel;
+  color: $white;
+  font-size: 13px;
+  outline: none;
+
+  &:focus {
+    border-color: rgba(249, 115, 22, 0.7);
+  }
+}

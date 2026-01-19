@@ -1,0 +1,40 @@
+$border: #262626;
+$muted: #a3a3a3;
+$white: #ffffff;
+
+.card {
+  border-radius: 16px;
+  border: 1px dashed $border;
+  min-height: 160px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: $muted;
+  background: transparent;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border 0.2s ease;
+}
+
+.card:hover {
+  background: rgba(255, 255, 255, 0.03);
+  color: $white;
+  border-color: #3a3a3a;
+}
+
+.icon {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.subtitle {
+  margin-top: 6px;
+  font-size: 12px;
+  color: inherit;
+}

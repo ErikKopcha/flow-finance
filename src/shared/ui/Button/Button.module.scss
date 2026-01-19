@@ -1,0 +1,54 @@
+$orange: #f97316;
+$orange-dark: #ea580c;
+$white: #ffffff;
+$border: #262626;
+$muted: #a3a3a3;
+$danger: #ef4444;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+  background: $orange-dark;
+  color: $white;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 12px 20px rgba(249, 115, 22, 0.2);
+  transition: background 0.2s ease;
+}
+
+.button:hover {
+  background: $orange;
+}
+
+.small {
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+.secondary {
+  background: transparent;
+  color: $muted;
+  border: 1px solid $border;
+  box-shadow: none;
+}
+
+.secondary:hover {
+  background: rgba(255, 255, 255, 0.04);
+  color: $white;
+}
+
+.danger {
+  background: $danger;
+  box-shadow: none;
+}
+
+.danger:hover {
+  background: #dc2626;
+}

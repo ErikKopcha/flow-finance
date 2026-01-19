@@ -1,0 +1,411 @@
+$bg: #050505;
+$panel: #0f0f0f;
+$panel-dark: #0c0c0c;
+$panel-deeper: #0a0a0a;
+$border: #262626;
+$border-soft: #1f1f1f;
+$muted: #a3a3a3;
+$muted-strong: #737373;
+$white: #ffffff;
+$orange: #f97316;
+$orange-bright: #fb923c;
+$orange-dark: #ea580c;
+$emerald: #10b981;
+$rose: #f43f5e;
+$blue: #3b82f6;
+$purple: #a855f7;
+
+.page {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.sectionTitleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sectionTitle {
+  font-size: 16px;
+  font-weight: 500;
+  color: $white;
+  margin: 0;
+}
+
+.sectionLink {
+  font-size: 13px;
+  font-weight: 600;
+  color: $orange;
+  text-decoration: none;
+}
+
+.splitGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: 24px;
+}
+
+.budgetItem {
+  padding: 20px;
+  border-radius: 16px;
+  background: $panel;
+  border: 1px solid $border;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: border 0.2s ease;
+
+  &:hover {
+    border-color: #3a3a3a;
+  }
+}
+
+.budgetRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.budgetTitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+  color: $white;
+  font-size: 14px;
+}
+
+.budgetIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: rgba(244, 63, 94, 0.12);
+  color: $rose;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.budgetIconOrange {
+  background: rgba(249, 115, 22, 0.12);
+  color: $orange;
+}
+
+.progressHint {
+  font-size: 11px;
+  color: $muted-strong;
+  text-align: right;
+}
+
+.goalCard {
+  padding: 24px;
+  border-radius: 16px;
+  background: $panel;
+  border: 1px solid $border;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.goalCircle {
+  width: 128px;
+  height: 128px;
+  border-radius: 999px;
+  border: 4px solid $border;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.goalArc {
+  position: absolute;
+  inset: -4px;
+  border-radius: 999px;
+  border: 4px solid $emerald;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  transform: rotate(45deg);
+}
+
+.goalValue {
+  font-size: 28px;
+  font-weight: 700;
+  color: $white;
+}
+
+.goalMeta {
+  font-size: 12px;
+  color: $muted-strong;
+}
+
+.secondaryButton {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid $border;
+  background: $panel-dark;
+  color: $white;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+
+  &:hover {
+    background: #141414;
+  }
+}
+
+.categoryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.categoryCard {
+  padding: 20px;
+  border-radius: 16px;
+  background: $panel;
+  border: 1px solid $border;
+  transition: border 0.2s ease;
+}
+
+.categoryCard:hover {
+  border-color: #3a3a3a;
+}
+
+.categoryIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: rgba(168, 85, 247, 0.12);
+  color: $purple;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+.accountsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.accountBalance {
+  font-size: 28px;
+  color: $white;
+  font-weight: 500;
+  margin-top: 6px;
+}
+
+.creditGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.creditCard {
+  padding: 28px;
+  border-radius: 16px;
+  border: 1px solid $border;
+  background: $panel;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.creditTitle {
+  width: 100%;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 500;
+  color: $white;
+  margin: 0;
+}
+
+.gauge {
+  width: 180px;
+  height: 180px;
+  border-radius: 999px;
+  background: conic-gradient($emerald 0% 75%, $border 75% 100%);
+  display: grid;
+  place-items: center;
+  padding: 8px;
+}
+
+.gaugeInner {
+  width: 100%;
+  height: 100%;
+  border-radius: 999px;
+  background: $panel;
+  display: grid;
+  place-items: center;
+}
+
+.gaugeValue {
+  font-size: 36px;
+  font-weight: 700;
+  color: $white;
+}
+
+.gaugeLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: $emerald;
+}
+
+.debtCard {
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid $border;
+  background: $panel;
+}
+
+.debtHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.debtLink {
+  font-size: 13px;
+  font-weight: 600;
+  color: $orange;
+  text-decoration: none;
+}
+
+.debtItem {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.debtRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.debtTitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: $white;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.debtIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: #1a1a1a;
+  display: grid;
+  place-items: center;
+  color: #d1d5db;
+}
+
+.debtAmount {
+  font-weight: 600;
+  color: $white;
+}
+
+.debtBar {
+  height: 6px;
+  border-radius: 999px;
+  background: #1a1a1a;
+  overflow: hidden;
+}
+
+.debtFill {
+  height: 100%;
+  border-radius: 999px;
+  background: #525252;
+}
+
+.settingsGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 220px) minmax(0, 1fr);
+  gap: 24px;
+  max-width: 900px;
+}
+
+.settingsMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.settingsButton {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: $muted;
+  font-size: 13px;
+  text-align: left;
+  cursor: pointer;
+
+  &:hover {
+    color: $white;
+    background: rgba(255, 255, 255, 0.04);
+  }
+}
+
+.settingsButtonActive {
+  background: $panel;
+  border-color: $border;
+  color: $white;
+}
+
+.settingsPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.settingsSectionTitle {
+  font-size: 16px;
+  font-weight: 500;
+  color: $white;
+  border-bottom: 1px solid $border;
+  padding-bottom: 12px;
+}
+
+.settingsProfile {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.settingsAvatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 999px;
+  background: #1a1a1a;
+  border: 1px solid $border;
+  display: grid;
+  place-items: center;
+  color: $white;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.smallButton {
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid $border;
+  background: #1a1a1a;
+  color: $white;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+}

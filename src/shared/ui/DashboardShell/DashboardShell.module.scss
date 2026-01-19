@@ -1,0 +1,280 @@
+$bg: #050505;
+$panel: #0f0f0f;
+$panel-dark: #0c0c0c;
+$border: #262626;
+$muted: #a3a3a3;
+$muted-strong: #737373;
+$white: #ffffff;
+$orange: #f97316;
+$orange-dark: #ea580c;
+$rose: #f43f5e;
+
+.shell {
+  min-height: 100vh;
+  background: $bg;
+  color: #d4d4d4;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+}
+
+.sidebar {
+  background: $bg;
+  border-right: 1px solid $border;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 24px;
+}
+
+.brandIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, $orange 0%, #c2410c 100%);
+  display: grid;
+  place-items: center;
+  color: $white;
+  box-shadow: 0 12px 24px rgba(251, 146, 60, 0.2);
+}
+
+.brandText {
+  font-size: 20px;
+  font-weight: 500;
+  color: $white;
+  letter-spacing: -0.02em;
+}
+
+.nav {
+  flex: 1;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  color: $muted;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  background: transparent;
+  border: 1px solid transparent;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border 0.2s ease;
+
+  &:hover {
+    color: $white;
+    background: rgba(255, 255, 255, 0.04);
+    border-color: $border;
+  }
+}
+
+.navItemActive {
+  color: $orange;
+  background: rgba(249, 115, 22, 0.12);
+  border-color: rgba(249, 115, 22, 0.3);
+}
+
+.navItemDanger {
+  &:hover {
+    color: $rose;
+    background: rgba(244, 63, 94, 0.1);
+    border-color: rgba(244, 63, 94, 0.2);
+  }
+}
+
+.sidebarFooter {
+  padding: 16px;
+  border-top: 1px solid $border;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.profile {
+  margin-top: 12px;
+  padding: 16px 12px 0;
+  border-top: 1px solid $border;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profileAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: $panel;
+  border: 1px solid $border;
+  display: grid;
+  place-items: center;
+  color: $white;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.profileText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.profileName {
+  font-size: 13px;
+  color: $white;
+  font-weight: 500;
+}
+
+.profilePlan {
+  font-size: 11px;
+  color: $muted-strong;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(5, 5, 5, 0.9);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid $border;
+  padding: 20px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.headerTitle {
+  font-size: 24px;
+  font-weight: 500;
+  color: $white;
+  letter-spacing: -0.02em;
+}
+
+.headerDescription {
+  font-size: 13px;
+  color: $muted-strong;
+  margin-top: 6px;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.rangeToggle {
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  border-radius: 10px;
+  background: $panel;
+  border: 1px solid $border;
+}
+
+.rangeButton {
+  border: none;
+  background: transparent;
+  color: $muted;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+
+  &:hover {
+    color: $white;
+  }
+}
+
+.rangeButtonActive {
+  background: $border;
+  color: $white;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.dateButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid $border;
+  background: $panel;
+  color: $white;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: #151515;
+  }
+}
+
+.content {
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+.page {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+@media (max-width: 1024px) {
+  .shell {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .header {
+    padding: 16px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .page {
+    padding: 24px 20px;
+  }
+
+  .headerActions {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}

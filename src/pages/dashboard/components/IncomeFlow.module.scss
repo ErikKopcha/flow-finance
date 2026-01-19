@@ -1,0 +1,35 @@
+$panel: #0f0f0f;
+$panel-dark: #0c0c0c;
+$panel-deeper: #0a0a0a;
+$border: #262626;
+$white: #ffffff;
+
+.panel {
+  border-radius: 16px;
+  border: 1px solid $border;
+  background: $panel-dark;
+  overflow: hidden;
+}
+
+.header {
+  padding: 20px 24px;
+  border-bottom: 1px solid $border;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: $panel;
+  font-size: 16px;
+  font-weight: 500;
+  color: $white;
+}
+
+.body {
+  padding: 24px 32px;
+  background: $panel-deeper;
+  overflow-x: auto;
+}
+
+.canvas {
+  min-width: 800px;
+  height: 300px;
+}

@@ -1,0 +1,48 @@
+$panel: #0f0f0f;
+$border: #262626;
+$muted-strong: #737373;
+$white: #ffffff;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.field {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+}
+
+.icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  transform: translateY(-50%);
+  color: $muted-strong;
+}
+
+.input {
+  width: 100%;
+  background: $panel;
+  border: 1px solid $border;
+  border-radius: 10px;
+  padding: 10px 14px 10px 36px;
+  color: $white;
+  font-size: 13px;
+  outline: none;
+
+  &:focus {
+    border-color: rgba(249, 115, 22, 0.7);
+  }
+}

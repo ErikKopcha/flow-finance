@@ -1,3 +1,5 @@
+import { LoginPage } from '@/pages/login/LoginPage'
+
 export function HomePage() {
-  return null
+  return <LoginPage />
 }

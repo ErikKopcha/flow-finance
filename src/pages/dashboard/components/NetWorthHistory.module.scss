@@ -1,0 +1,30 @@
+$muted-strong: #737373;
+$orange: #f97316;
+$border: #262626;
+
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  color: $muted-strong;
+}
+
+.legendDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: $orange;
+}
+
+.legendDotMuted {
+  background: $border;
+}
+
+.labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: $muted-strong;
+  margin-top: 6px;
+}
